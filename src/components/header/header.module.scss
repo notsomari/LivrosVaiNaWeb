@@ -10,7 +10,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-   
     width: 20%;
 }
 
@@ -53,6 +52,7 @@ h1{
         background-color: transparent;
         border: none;
         width: 60%;
+        outline: none;
 
         &::placeholder{
             color: #fff;
@@ -64,5 +64,21 @@ h1{
         background-color: transparent;
         border: none;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 780px){
+    header{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .logoHeader{
+        width: 90%;
+    }
+    .navHeader{
+        width: 95%;
+    }
+    .barraDeBusca{
+       display: none;
     }
 }

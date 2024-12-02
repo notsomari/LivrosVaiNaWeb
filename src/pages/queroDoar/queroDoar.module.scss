@@ -1,0 +1,71 @@
+.queroDoarSection{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    p{
+        font-size: 24px;
+    }
+}
+
+form {
+    border: solid #005695;
+    border-radius: 20px;
+    height: 70vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    div{
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+        align-items: center;
+        color: #005695;
+    }
+
+input{
+    width: 90%;
+    border: solid #005695;
+    border-radius: 15px;
+    height: 5vh;
+    padding-left: 20px;
+
+    &::placeholder {
+        color: #000;
+        }
+    }
+}
+
+.botaoDoar {
+    width: 40%;
+    height: 8vh;
+    background-color: #005695;
+    color: white;
+    font-size: 24px;
+    padding: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 780px){
+    .queroDoarSection{
+    height: 100vh;
+
+        p{
+            font-size: 18px;
+            text-align: center;
+            width: 70%;
+        }
+
+        form{
+            width: 90%;
+            font-size: 15px;
+        }
+
+    }
+
+}

@@ -8,7 +8,7 @@ export default function Inicio (){
     return (
        <main>
         <section className={s.primeiraSessaoInicio}>
-            <h2>Venha Fazer Parte Da Maior Rede De Doação.</h2>
+            <h2>Venha Fazer Parte Da Maior Rede De Doação</h2>
         </section>
 
         <section className={s.porqueDoarSection}>
