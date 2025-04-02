@@ -13,6 +13,11 @@
 .containerCards{
     width: 95%;
     height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: 9vw;
+    }
 
 
 section{

@@ -34,7 +34,19 @@ export default function QueroDoar(){
             autor,
             image_url
         }
-        await axios.post("https://primeira-api-ssli.onrender.com/doar",dadosParaEnviar)
+
+        try {
+            await axios.post("https://primeira-api-ssli.onrender.com/doar",dadosParaEnviar)
+
+            setTitulo('')
+            setCategoria('')
+            setAutor('')
+            setImage_url('')
+        }
+
+        catch (error) {
+        console.error("Erro ao enviar os dados:", error)
+        }
     }
 
     return(
@@ -45,10 +57,10 @@ export default function QueroDoar(){
                     <img src={iconeLivro} alt="Imagem ilustrando um livro aberto." />
                     <h2>Informações do Livro</h2>
                 </div>
-                <input required type="text" name="" id=""  placeholder='Titulo' onChange={capturaTitulo} />
-                <input required type="text" name="" id=""  placeholder='Categoria' onChange={capturaCategoria} />
-                <input required type="text" name="" id=""  placeholder='Autor' onChange={capturaAutor} />
-                <input required type="text" name="" id=""  placeholder='Link da Imagem' onChange={capturaImg} />
+                <input required type="text" name="" id=""  placeholder='Titulo' value={titulo} onChange={capturaTitulo} />
+                <input required type="text" name="" id=""  placeholder='Categoria' value={categoria} onChange={capturaCategoria} />
+                <input required type="text" name="" id=""  placeholder='Autor' value={autor} onChange={capturaAutor} />
+                <input required type="url" name="" id=""  placeholder='Link da Imagem' value={image_url} onChange={capturaImg} />
                 <input required type="submit" value="Doar" className={s.botaoDoar} onClick={envioDados} />
             </form>
         </section>

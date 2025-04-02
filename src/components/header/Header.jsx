@@ -24,7 +24,7 @@ export default function Header(){
                 </ul>
             </nav>
             <section className={s.barraDeBusca}>
-                <input type="search" name="" id="" placeholder='O que você Procura?' />
+                <input type="search" name="" id="" placeholder='O que Você Procura?' />
                 <button>
                     <img src={lupa} alt="Imagem de uma lupa." />
                 </button>
