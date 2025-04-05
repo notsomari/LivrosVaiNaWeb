@@ -1,5 +1,5 @@
 .livrosDoadosSection {
-    height: 70vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,35 +7,58 @@
 
     h2{
         font-size: 32px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
 .containerCards{
     width: 95%;
-    height: 60vh;
+    height: auto;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    
     img{
         width: 9vw;
+        height: auto;
     }
 
-
 section{
-    border: solid 3px #005695;
-    width: 14%;
-    height: 40vh;
+    border: solid 2px #005695;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 140px;
+    max-width: 200px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 16px;
+    word-wrap: break-word;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
     }
 
     div{
+        width: 90%;
+        max-width: 100%;
         text-align: center;
         font-size: 16px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
+
 
 @media (max-width:780px){
     .containerCards{

@@ -3,6 +3,7 @@ import twitterLogo from '../../assets/twitterLogo.png'
 import youtubeLogo from '../../assets/youtubeLogo.png'
 import linkedinLogo from '../../assets/linkedinLogo.png'
 import instagramLogo from '../../assets/instagramLogo.png'
+
 import s from './footer.module.scss'
 
 

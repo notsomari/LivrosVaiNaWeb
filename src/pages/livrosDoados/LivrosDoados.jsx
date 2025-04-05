@@ -6,18 +6,41 @@ import axios from 'axios'
 
 export default function LivrosDoados(){
 
-    const [livros,setLivros] = useState([])
+    
+        const [livros,setLivros] = useState([])
+        const [loading, setLoading] = useState(true)
 
     const puxarLivros = async() =>{
-        const resposta = await axios.get("https://primeira-api-ssli.onrender.com/livros")
-        setLivros(resposta.data)
+        try{
+            const resposta = await axios.get("https://primeira-api-ssli.onrender.com/livros")
+            setLivros(resposta.data)
         
     }
-    console.log(livros)
 
+    catch (error) {
+        console.error("Erro ao buscar livros:", error)
+    }
+    finally {
+        setLoading(false)
+    }
+}
+
+console.log(livros)
+    
     useEffect(()=>{
         puxarLivros()
     },[])
+
+    if (loading) {
+        return(
+            <section className={s.livrosDoadosSection}>
+                <h2>Livros Doados</h2>
+                <div>
+                <p>Carregando Livros Doados...</p>
+                </div>
+            </section>
+        )
+    }
 
     return(
         <section className={s.livrosDoadosSection}>

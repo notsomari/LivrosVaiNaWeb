@@ -1,6 +1,6 @@
 import logoLivro from '../../assets/logoLivro.png'
 import lupa from '../../assets/lupa.png'
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link, Navigate} from 'react-router-dom'
 import Inicio from '../../pages/inicio/Inicio'
 import LivrosDoados from '../../pages/livrosDoados/LivrosDoados'
 import QueroDoar from '../../pages/queroDoar/QueroDoar'
@@ -31,9 +31,10 @@ export default function Header(){
             </section>
         </header>
         <Routes>
-            <Route path='/inicio' element={<Inicio/>}/>
-            <Route path='/livrosdoados' element={<LivrosDoados/>}/>
-            <Route path='/querodoar' element={<QueroDoar/>}/>
+            <Route path='/' element={<Navigate to="/inicio"/>} />
+            <Route path='/inicio' element={<Inicio/>} />
+            <Route path='/livrosdoados' element={<LivrosDoados/>} />
+            <Route path='/querodoar' element={<QueroDoar/>} />
         </Routes>
         </BrowserRouter>
     )
